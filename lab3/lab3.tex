@@ -103,9 +103,75 @@ logarithms of both zinc and lead would be more appropriate to compare with each 
 
 \paragraph{a)}
 
+I ran the following code.
+\begin{verbatim}
+linear_model2 <- lm(ice$Extent ~ ice$Date)
+summary(linear_model2)
+\end{verbatim}
+This output the following statistics.
+\begin{verbatim}
+Call:
+lm(formula = ice$Extent ~ ice$Date)
+
+Residuals:
+   Min     1Q Median     3Q    Max
+-9.445 -5.439  1.442  5.599  7.564
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) 1.011e+01  1.558e+00   6.486 4.11e-10 ***
+ice$Date    1.438e-04  1.411e-04   1.019    0.309
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.654 on 273 degrees of freedom
+Multiple R-squared:  0.003787,	Adjusted R-squared:  0.0001377
+F-statistic: 1.038 on 1 and 273 DF,  p-value: 0.3093
+\end{verbatim}
+
 \paragraph{b)}
 
+I ran the following code.
+\scriptsize
+\begin{verbatim}
+plot(ice$Extent ~ ice$Date, xlab="Date (Year)",
+     ylab="Ice Extent (millions of km^2)", main="Ice Extent Over Time", type="l")
+abline(linear_model2, col="red", lwd=2)
+\end{verbatim}
+\normalsize
+This generated the following plot.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=4.5in]{exercise2b.png}
+    \end{center}
+\end{figure}
+There does seem to be a slight upwards trend in this data as shown by the regression line.
+However, the main change in sea ice extent seems to come from the change in the seasons. The
+sea periodically rises and falls with a period of a year.
+
 \paragraph{c)}
+
+I ran the following code
+\scriptsize
+\begin{verbatim}
+plot(linear_model2$residuals ~ ice$Date, xlab="Date (Year)",
+     ylab="Ice Extent Residuals (millions of km^2)",
+     main = "Ice Extent Over Time Residuals plot")
+abline(a=0, b=0, col="red", lwd=2)
+\end{verbatim}
+\normalsize
+This generated the following plot.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=4.5in]{exercise2c.png}
+    \end{center}
+\end{figure}
+The assumption about the model that we should be concerned about is the linearity
+assumption. The residuals have bands where the density changes, which indicates
+that our model consistently over and under predicts the sea ice extent within certain
+time frames. In reality the sea ice extent is probably best modeled by a
+sinusoidal relationship. If we want a linear model we could also take the average
+ice size over the year or only record the ice size during a specific season.
 
 \section*{Exercise 3}
 
