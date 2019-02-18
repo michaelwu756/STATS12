@@ -1,3 +1,4 @@
+library(mosaic)
 soil <- read.table("soil_complete.txt", header=TRUE)
 linear_model <- lm(soil$lead ~ soil$zinc)
 summary(linear_model)
@@ -19,3 +20,12 @@ plot(linear_model2$residuals ~ ice$Date, xlab="Date (Year)",
      ylab="Ice Extent Residuals (millions of km^2)",
      main = "Ice Extent Over Time Residuals plot")
 abline(a=0, b=0, col="red", lwd=2)
+
+set.seed(123)
+faces = 1:6
+rolls = do(5000) * sample(faces, 2, replace=TRUE)
+sums = rowSums(rolls)
+histogram(sums, main="Sum of Two Fair Six-Sided Dice Rolls",
+        xlab="Sum", ylab="Times Rolled", n=11, type="count")
+mean(sums == 7 | sums == 11)
+mean(sums == 2 | sums == 3 | sums == 12)

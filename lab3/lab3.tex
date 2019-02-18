@@ -177,15 +177,62 @@ ice size over the year or only record the ice size during a specific season.
 
 \paragraph{a)}
 
+There is an \(\frac{8}{36}\) chance that Adam will double his money in the first
+round of the game and a \(\frac{4}{36}\) chance that Adam will lose his money
+in the first round of the game.
+
 \paragraph{b)}
+
+I ran the following code.
+\begin{verbatim}
+set.seed(123)
+faces = 1:6
+rolls = do(5000) * sample(faces, 2, replace=TRUE)
+sums = rowSums(rolls)
+\end{verbatim}
+The first five sums that were generated were 9, 7, 10, 7, and 9.
 
 \paragraph{c)}
 
+I ran the following code.
+\scriptsize
+\begin{verbatim}
+histogram(sums, main="Sum of Two Fair Six-Sided Dice Rolls",
+        xlab="Sum", ylab="Times Rolled", n=11, type="count")
+\end{verbatim}
+\normalsize
+This generated the following plot.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=4.5in]{exercise3c.png}
+    \end{center}
+\end{figure}
+
 \paragraph{d)}
+
+I ran the following code.
+\begin{verbatim}
+mean(sums == 7 | sums == 11)
+mean(sums == 2 | sums == 3 | sums == 12)
+\end{verbatim}
+This output that Adam doubled his money 23.36\% of the time in the simulation and lost
+his money 10.64\% of the time in the simulation.
 
 \paragraph{e)}
 
+They are mutually exclusive and not independent. This is because Adam cannot
+both win money and lose money on the first round at the same time. If they
+were independent, the probability of both events happening would be nonzero and
+equal to the product of the probabilities of the two independent events.
+
 \paragraph{f)}
+
+Let's assume that event \(A\) is Adam doubling his money and event \(B\) is
+Adam losing his money. Assume for contradiction that \(A\) and \(B\) are independent.
+Then we have the following.
+\[P(A\cap B)=P(A)P(B)=\frac{8}{36}\frac{4}{36}=\frac{2}{81}\]
+But we know that \(P(A\cap B)=0\), a contradiction. Thus \(A\) and \(B\) are not
+independent.
 
 \section*{Exercise 4}
 
