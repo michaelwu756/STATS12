@@ -238,12 +238,40 @@ independent.
 
 \paragraph{a)}
 
+We have that \(n=365\) and \(p=0.4\).
+
 \paragraph{b)}
+
+We have the mean \(np=146\) and the standard deviation \(\sqrt{np(1-p)}=9.359\).
 
 \paragraph{c)}
 
+I ran the following code.
+\begin{verbatim}
+dbinom(145, size=365, prob=0.4)
+\end{verbatim}
+This output that there is a 4.239996\% chance of heavy rain on exactly 145 days
+in 2017.
+
 \paragraph{d)}
 
+I ran the following code.
+\begin{verbatim}
+sum = 0
+for (num in 125:175) {
+  sum = sum + dbinom(num, size=365, prob=0.4)
+}
+\end{verbatim}
+This output that there is a 98.88137\% chance of heavy rain on 125 to 175 days inclusive
+in 2017.
+
 \paragraph{e)}
+
+I ran the following code.
+\begin{verbatim}
+1-pnorm(230, mean=200, sd=20)
+\end{verbatim}
+This output that there is a 6.68072\% chance of the park experiencing more than 230 inches
+of rain in 2017.
 
 \end{document}

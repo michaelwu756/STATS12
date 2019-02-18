@@ -29,3 +29,10 @@ histogram(sums, main="Sum of Two Fair Six-Sided Dice Rolls",
         xlab="Sum", ylab="Times Rolled", n=11, type="count")
 mean(sums == 7 | sums == 11)
 mean(sums == 2 | sums == 3 | sums == 12)
+
+dbinom(145, size=365, prob=0.4)
+sum = 0
+for (num in 125:175) {
+  sum = sum + dbinom(num, size=365, prob=0.4)
+}
+1-pnorm(230, mean=200, sd=20)
