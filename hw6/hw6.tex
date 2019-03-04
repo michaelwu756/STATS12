@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+\title{Statistics 12, Homework 6}
+\date{March 3rd, 2019}
+\author{Michael Wu\\UID: 404751542}
+\maketitle
+
+\section*{Chapter 17, Problem 2}
+
+\paragraph{a)}
+
+I would expect \(51\%\) of the sample to be women.
+
+\paragraph{b)}
+
+\[\sqrt{\frac{0.51\times0.49}{400}}\approx 0.024995 = 2.4995\%\]
+
+\paragraph{c)}
+
+I would expect \(0.51\times400=204\) women to be in the sample on average.
+
+\section*{Chapter 17, Problem 4}
+
+This demonstrates what the Central Limit Theorem says about the sampling distribution
+for sample proportions because as the size of the sample increases, the distribution
+becomes more normal. The center of the distribution remains at 0.85, which is the
+given proportion. The shape is initially skewed left but becomes symmetric as
+the sample size increases. The spread is initially wide, but becomes narrower as
+the sample size increases. This fits with the Central Limit Theorem because it says the
+standard deviation of the sampling distribution should scale inversely by a factor of
+\(\sqrt{n}\), where \(n\) is the sample size.
+
+\section*{Chapter 17, Problem 8}
+
+\paragraph{a)}
+
+I would be comfortable using the normal distribution with samples of size 100.
+
+\paragraph{b)}
+
+The success and failure condition says that this is an appropriate choice since at this
+sample size the simulation has at least 10 success and failures.
+
+\section*{Chapter 17, Problem 10}
+
+\paragraph{a)}
+
+No, a normal model would not be a good model for this sampling distribution because it will
+always be skewed right. The squared term in the variance means that cans that are far away
+from the 16 oz target affect the variance more than cans that have close to 16 oz of soup.
+
+\paragraph{b)}
+
+No I would not expect about 95\% of the samples to have their variances between 0.008 of
+0.009. This is because the distribution is skewed right, so a larger percentage of the variances
+would be outside this range on the right than they should be.
+
+\section*{Chapter 17, Problem 12}
+
+\paragraph{a)}
+
+\[\sqrt{\frac{0.76\times0.24}{500}}\approx 0.0191 = 1.91\%\]
+
+\paragraph{b)}
+
+\[\sqrt{\frac{0.76\times0.24}{125}}\approx 0.0382 = 3.82\%\]
+
+\section*{Chapter 17, Problem 22}
+
+The standard deviation of the sample proportion should be
+\[\sqrt{\frac{0.1\times0.9}{500}}\approx 0.01341 = 1.341\%\]
+and so the z-score of the observed percentage of M\&M's is
+\[\frac{0.12-0.1}{0.01341}\approx 1.49\]
+This is not an unusual z-score since it is within two standard deviations from
+the given proportion.
+
+\section*{Chapter 18, Problem 4}
+
+\paragraph{a)}
+
+The interval means that from this sample, we can predict that the true population proportion
+of people who say that the trend of more single women having children is a good thing should lie
+between 2.9\% and 5.1\% with 95\% confidence.
+
+\paragraph{b)}
+
+The meaning of 95\% confidence is that our generated interval should contain the true population
+proportion 95\% of the times we perform this study using the same methods.
+
+\section*{Chapter 18, Problem 6}
+
+\paragraph{a)}
+
+The critical value for a 99\% confidence level is 2.58. Then the following calculation gives us
+the margin of error.
+\[2.58\times\sqrt{\frac{0.49\times0.51}{1500}}\approx0.0333=3.33\%\]
+
+\paragraph{b)}
+
+The margin of error should be smaller for 95\% confidence. This is because the critical value required
+for 95\% confidence should be smaller, while the standard error remains the same.
+
+\section*{Chapter 18, Problem 8}
+
+\paragraph{a)}
+
+Yes, the conditions for constructing a confidence interval are met. The respondents are randomly
+selected and independent, the number of successes and failures are above at least 10, and the sample size
+is less than 10\% of the population size.
+
+\paragraph{b)}
+
+\begin{align*}
+    1.96\times\sqrt{\frac{0.04\times0.96}{n}}&=0.03\\
+    \frac{0.04\times0.96}{n}&=\left(\frac{0.03}{1.96}\right)^2\\
+    n&=0.04\times0.96\times\left(\frac{1.96}{0.03}\right)^2=163.9
+\end{align*}
+At least 164 people should be surveyed to create a 95\% confidence interval with a margin of error less than
+3\%.
+
+\section*{Chapter 18, Problem 14}
+
+\paragraph{a)}
+
+This conclusion is incorrect. We do not know how to define fairness and our study does not even mention the
+concept.
+
+\paragraph{b)}
+
+This conclusion, while technically correct, is inaccurate because we know the true experimental proportion
+of times the euro landed on heads. It would be more correct to say that in this experiment, the euro landed
+on heads 56\% of the time.
+
+\paragraph{c)}
+
+This conclusion is correct. The confidence interval indicates that the true proportion that a euro
+will land on heads lies within 51\% and 61\% with 90\% confidence.
+
+\paragraph{d)}
+
+This conclusion is correct. Assuming that we are able to observe enough spins such that the standard deviation
+of the sample proportion becomes very small, the proportion of observed heads becomes very close to the
+true percentage that a euro will land on heads. We are 90\% confident that the true proportion that a euro
+will land on heads on heads lies within 51\% and 61\%.
+
+\paragraph{e)}
+
+This conclusion is correct. It is exactly the same as the previous conclusion.
+
+\end{document}
