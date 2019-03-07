@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+\usepackage{amsmath}
 \begin{document}
 \title{Statistics 12, Homework 7}
 \date{March 10th, 2019}
@@ -7,13 +8,89 @@
 
 \section*{Chapter 19, Problem 6}
 
+\paragraph{a)}
+
+The null hypothesis is that the proportion of vacant houses in the county is equal to \(0.114\). The alternative
+hypothesis is that the proportion of vacant houses in the county is not equal to \(0.114\).
+
+\paragraph{b)}
+
+We can verify that our sample is random, less than 10\% of the population, and has at least 10 successes and failures. So
+we can use the normal model to perform a one proportion \(z\)-test.
+
+\paragraph{c)}
+
+We have the standard deviation of the sample proportion equal to \(\sqrt{\frac{0.114\times0.886}{850}}=0.0109\).
+The sample proportion is \(\frac{129}{850}=0.1518\). The test statistic is then \(\frac{0.1518-0.16}{0.0109}=-0.7523\).
+This has a p-value of \(0.4519\). If the null hypothesis is true, the sampling distribution of sample proportions will
+look like the following distribution.
+% TODO
+
+\paragraph{d)}
+
+Using a significance level of \(0.05\), we find that the p-value is greater than this and we cannot reject the null hypothesis.
+Thus we cannot conclude that the proportion of empty houses in the county is different from the proportion of empty houses in the
+United States.
+
 \section*{Chapter 19, Problem 8}
+
+Her alternative hypothesis should be two sided, since she is trying to find out if the proportion in the county is
+different from the proportion in the nation as a whole. This ensures that she could detect both if the proportion in the
+county is low enough or high enough to reject the null hypothesis.
 
 \section*{Chapter 19, Problem 14}
 
+Since the seller has not specified the proportion of times that a 6 should appear, we can only set up our hypothesis
+test by using \(p=\frac{1}{6}\) as our null hypothesis and \(p>\frac{1}{6}\) as our alternative hypothesis. Let
+us assume a significance level of \(0.05\). Then since our p-value is less than this, we can reject the null hypothesis
+and conclude that the die is loaded. Thus we should choose choice d. 
+
 \section*{Chapter 20, Problem 20}
 
+\paragraph{a)}
+
+This output means that we can say that the true average age that babies begin to crawl for our population is
+between 29.202 weeks and 31.844 weeks with 95\% confidence.
+
+\paragraph{b)}
+
+\[\frac{31.844-29.202}{2}=1.321 \text{ weeks}\]
+
+\paragraph{c)}
+
+The margin of error would be smaller. This is because the lower confidence level means that our test would have a smaller
+critical value, reducing the margin of error. This makes sense because a smaller margin of error increases the chance
+that our confidence interval does not contain the true population mean, which is expected due to the lower confidence.
+
 \section*{Chapter 20, Problem 24}
+
+\paragraph{a)}
+
+We must assume that the daily income that the garage generates is independent from any other day and randomly selected
+from some nearly normal distribution. This is not too reasonable since garage revenues may go up or down depending on
+whether events are happening around the garage or if it is shopping season or whatnot. We may still proceed with our tests,
+keeping this in mind.
+
+\paragraph{b)}
+
+Our standard error is \(\frac{15}{\sqrt{44}}=2.261\). We have 43 degrees of freedom, so our critical value is 1.681. Thus
+our confidence interval is the one shown below.
+\[126\pm1.681\times2.261=(122.20,129.80)\]
+
+\paragraph{c)}
+
+This confidence interval means that we can say the true mean daily income for the parking garage is between \$122.20
+and \$129.80 with 90\% confidence.
+
+\paragraph{d)}
+
+90\% confidence in this context means that assuming that the requirements for constructing a confidence interval are met,
+we would expect that an interval constructed using our methods should contain the true mean daily income for the parking
+garage 90\% of the time.
+
+\paragraph{e)}
+
+This is the same as the previous section.
 
 \section*{Chapter 21, Problem 2}
 
