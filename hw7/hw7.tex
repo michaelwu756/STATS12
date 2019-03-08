@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\usepackage{pgfplots}
 \begin{document}
 \title{Statistics 12, Homework 7}
 \date{March 10th, 2019}
@@ -23,8 +24,24 @@ we can use the normal model to perform a one proportion \(z\)-test.
 We have the standard deviation of the sample proportion equal to \(\sqrt{\frac{0.114\times0.886}{850}}=0.0109\).
 The sample proportion is \(\frac{129}{850}=0.1518\). The test statistic is then \(\frac{0.1518-0.16}{0.0109}=-0.7523\).
 This has a p-value of \(0.4519\). If the null hypothesis is true, the sampling distribution of sample proportions will
-look like the following distribution.
-% TODO
+look like the following graph.
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            no markers, domain=0.10:0.22, samples=100,
+            axis lines*=left, xlabel=Vacant Proportion, ylabel=Density, title=Distribution of Sample Proportions for Sample Size 850
+            height=5cm, width=12cm,
+            xtick={0.1273,0.1382,0.1491,0.16,0.1709,0.1818,0.1927}, ytick=\empty,
+            enlargelimits=false, clip=false, axis on top,
+            grid = major
+        ]
+            \addplot [very thick,cyan!50!black] {gauss(0.16,0.109)};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
 
 \paragraph{d)}
 
