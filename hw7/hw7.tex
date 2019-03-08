@@ -21,7 +21,8 @@ we can use the normal model to perform a one proportion \(z\)-test.
 
 \paragraph{c)}
 
-We have the standard deviation of the sample proportion equal to \(\sqrt{\frac{0.114\times0.886}{850}}=0.0109\).
+We have the standard deviation of the sample proportion equal to
+\[\sqrt{\frac{0.114\times0.886}{850}}=0.0109\]
 The sample proportion is \(\frac{129}{850}=0.1518\). The test statistic is then \(\frac{0.1518-0.16}{0.0109}=-0.7523\).
 This has a p-value of \(0.4519\). If the null hypothesis is true, the sampling distribution of sample proportions will
 look like the following graph.
@@ -31,14 +32,15 @@ look like the following graph.
 \begin{center}
     \begin{tikzpicture}
         \begin{axis}[
-            no markers, domain=0.10:0.22, samples=100,
-            axis lines*=left, xlabel=Vacant Proportion, ylabel=Density, title=Distribution of Sample Proportions for Sample Size 850
+            no markers, domain=0.12:0.2, samples=100,
+            axis lines*=left, xlabel=Vacant Proportion, ylabel=Density, title=Distribution of Sample Proportions for Sample Size 850,
             height=5cm, width=12cm,
             xtick={0.1273,0.1382,0.1491,0.16,0.1709,0.1818,0.1927}, ytick=\empty,
             enlargelimits=false, clip=false, axis on top,
-            grid = major
+            grid = major,
+            x tick label style={/pgf/number format/.cd,fixed,precision=3}
         ]
-            \addplot [very thick,cyan!50!black] {gauss(0.16,0.109)};
+            \addplot [very thick,cyan!50!black] {gauss(0.16,0.0109)};
         \end{axis}
     \end{tikzpicture}
 \end{center}
@@ -60,7 +62,7 @@ county is low enough or high enough to reject the null hypothesis.
 Since the seller has not specified the proportion of times that a 6 should appear, we can only set up our hypothesis
 test by using \(p=\frac{1}{6}\) as our null hypothesis and \(p>\frac{1}{6}\) as our alternative hypothesis. Let
 us assume a significance level of \(0.05\). Then since our p-value is less than this, we can reject the null hypothesis
-and conclude that the die is loaded. Thus we should choose choice d. 
+and conclude that the die is loaded. Thus we should choose choice d.
 
 \section*{Chapter 20, Problem 20}
 
@@ -114,22 +116,22 @@ This is the same as the previous section.
 \paragraph{a)}
 
 The parameter is a proportion. The hypotheses are shown below.
-\[H_0:p=0.65\qquadH_a:p\neq0.65\]
+\[H_0:p=0.65\qquad H_a:p\neq0.65\]
 
 \paragraph{b)}
 
 The parameter is a proportion. The hypotheses are shown below.
-\[H_0:p=0.45\qquadH_a:p\neq0.45\]
+\[H_0:p=0.45\qquad H_a:p\neq0.45\]
 
 \paragraph{c)}
 
 The parameter is a proportion. The hypotheses are shown below.
-\[H_0:p=0.067\qquadH_a:p\neq0.067\]
+\[H_0:p=0.067\qquad H_a:p\neq0.067\]
 
 \paragraph{d)}
 
 The parameter is a mean. The hypotheses are shown below.
-\[H_0:\mu=17.3\qquadH_a:\mu\neq17.3\]
+\[H_0:\mu=17.3\qquad H_a:\mu\neq17.3\]
 
 \section*{Chapter 21, Problem 4}
 
